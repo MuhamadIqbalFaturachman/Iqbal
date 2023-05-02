@@ -14,8 +14,8 @@
   <thead>
     <tr>
       <th scope="col">No</th>
-      <th scope="col">Nama</th>
-      <th scope="col">location</th>
+      <th scope="col">Name</th>
+      <th scope="col">Location</th>
       <th scope="col">Manager Id</th>
       <th scope="col">Actions</th>
     </tr>
@@ -28,7 +28,12 @@
       <!-- <td>{{ $data->id }}</td> -->
       <td>{{ $data->name }}</td>
       <td>{{ $data->location }}</td>
-      <td>{{ $data->manager_id }}</td>
+      <td>{{
+        (isset($data->manager->email)) ?
+        $data->manager->email :
+        'Tidak Ada'
+      }}
+      </td>
       <td>
         <form action="{{ route('departements.destroy',$data->id) }}" method="Post">
           <a class="btn btn-primary" href="{{ route('departements.edit',$data->id) }}">Edit</a>
