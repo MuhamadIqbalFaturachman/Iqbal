@@ -1,9 +1,9 @@
 @extends('app')
 @section('content')
-@if(session('succes'))
+@if(session('success'))
 <div class="alert alert-success alert-dismissible fade show" role="alert">
-  {{session('succes')}}
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>'
+  {{session('success')}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
 </div>
 @endif
 <div class="text-end mb-2">
@@ -11,15 +11,15 @@
 </div>
 <table class="table">
   <thead>
-    <tr>
-      <th scope="col">No</th>
-      <th scope="col">Nama</th>
-      <th scope="col">Keterangan</th>
-      <th scope="col">Singkatan</th>
-      <th scope="col">Actions</th>
+    <tr style="background-color: #0000FF;">
+      <th scope="col" style="color: #FFFFFF;">No</th>
+      <th scope="col" style="color: #FFFFFF;">Nama</th>
+      <th scope="col" style="color: #FFFFFF;">Keterangan</th>
+      <th scope="col" style="color: #FFFFFF;">Singkatan</th>
+      <th scope="col" style="color: #FFFFFF;">Actions</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody style="background-color: #D4EFDF;">
     @php $no = 1 @endphp
     @foreach ($positions as $data)
     <tr>
@@ -40,4 +40,5 @@
     @endforeach
   </tbody>
 </table>
+
 @endsection

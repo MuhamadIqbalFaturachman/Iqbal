@@ -7,20 +7,20 @@
 </div>
 @endif
 <div class="text-end mb-2">
-  <a class="btn btn-success" href="{{ route('companies.create') }}"> Add Pegawai</a>
+  <a class="btn btn-light" href="{{ route('exportpdf') }}"> Cetak</a>
+  <a class="btn btn-success" href="{{ route('departements.create') }}"> Add Pasien</a>
 </div>
-
-<table class="table">
+<table id="example" class="table table-striped" style="width:100%">
   <thead>
-    <tr>
-      <th scope="col">No</th>
-      <th scope="col">Name</th>
-      <th scope="col">Location</th>
-      <th scope="col">Manager Id</th>
-      <th scope="col">Actions</th>
+    <tr style="background-color: #0000FF;">
+      <th scope="col" style="color: #FFFFFF;">No</th>
+      <th scope="col" style="color: #FFFFFF;">Nama</th>
+      <th scope="col" style="color: #FFFFFF;">Location</th>
+      <th scope="col" style="color: #FFFFFF;">Manager_id</th>
+      <th scope="col" style="color: #FFFFFF;">Actions</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody style="background-color: #D4EFDF;">
     @php $no = 1 @endphp
     @foreach ($departements as $data)
     <tr>
@@ -29,11 +29,9 @@
       <td>{{ $data->name }}</td>
       <td>{{ $data->location }}</td>
       <td>{{
-        (isset($data->manager->email)) ?
-        $data->manager->email :
-        'Tidak Ada'
-      }}
-      </td>
+        (isset($data->manager->name))?
+      $data->manager->name : 
+    'Tidak Ada'}}</td>
       <td>
         <form action="{{ route('departements.destroy',$data->id) }}" method="Post">
           <a class="btn btn-primary" href="{{ route('departements.edit',$data->id) }}">Edit</a>
@@ -46,4 +44,11 @@
     @endforeach
   </tbody>
 </table>
+@endsection
+@section('js')
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable();
+  });
+</script>
 @endsection

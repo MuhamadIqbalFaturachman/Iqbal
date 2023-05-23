@@ -3,7 +3,7 @@
 <form action="{{ route('positions.update',$position->id) }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
-    <div class="row">
+    <div class="row g-3">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Position Name:</strong>
@@ -24,20 +24,15 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Alias</strong>
-                <select name="alias">
-                    <option value="-">Pilih</option>
-                    <option value="Manager">Manager</option>
-                    <option value="Karyawan">Karyawan</option>
-                    <option value="Magang">Magang</option>
-                </select>
-                <!-- <input type="text" name="alias" value="{{ $position->alias }}" class="form-control" placeholder="alias"> -->
+                <strong>Singkatan:</strong>
+                <input type="text" name="alias" value="{{ $position->alias }}" class="form-control" placeholder="alias">
                 @error('alias')
                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                 @enderror
             </div>
         </div>
         <button type="submit" class="btn btn-primary mt-3 ml-3">Submit</button>
+        <a class="btn btn-danger" href="{{ route('positions.index') }}">Back</a>
     </div>
 </form>
 @endsection
