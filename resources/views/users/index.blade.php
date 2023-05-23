@@ -32,7 +32,7 @@
       <td>{{ $data->email }}</td>
       <td>{{ $data->password }}</td>
       <td>{{ $data->positions }}</td>
-      <td>{{ $data->name }}</td>
+      <td>{{ $data->departements }}</td>
       <!-- <td>{{
         (isset($data->manager->name))?
       $data->manager->name : 

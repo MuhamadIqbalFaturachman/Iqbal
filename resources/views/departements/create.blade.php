@@ -21,8 +21,8 @@
                         <div class="card-body">
                             <div class="col-md-8">
                                 <div class="form-group">
-                                    <strong>Name:</strong>
-                                    <input type="text" name="name" class="form-control" placeholder="neme">
+                                    <strong>Nama:</strong>
+                                    <input type="text" name="name" class="form-control" placeholder="Nama">
                                     @error('name')
                                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                     @enderror
@@ -30,8 +30,8 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="form-group">
-                                    <strong>location:</strong>
-                                    <input type="location" name="location" class="form-control" placeholder="location">
+                                    <strong>Lokasi:</strong>
+                                    <input type="location" name="location" class="form-control" placeholder="Lokasi">
                                     @error('location')
                                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                     @enderror

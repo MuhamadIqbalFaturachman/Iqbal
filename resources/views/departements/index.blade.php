@@ -8,7 +8,7 @@
 @endif
 <div class="text-end mb-2">
   <a class="btn btn-light" href="{{ route('exportpdf') }}"> Cetak</a>
-  <a class="btn btn-success" href="{{ route('departements.create') }}"> Add Pasien</a>
+  <a class="btn btn-success" href="{{ route('departements.create') }}"> Add Pembeli</a>
 </div>
 <table id="example" class="table table-striped" style="width:100%">
   <thead>
