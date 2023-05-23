@@ -12,7 +12,7 @@
 </div>
 <table id="example" class="table table-striped" style="width:100%">
   <thead>
-    <tr style="background-color: #0000FF;">
+    <tr style="background-color: #1D267D;">
       <th scope="col" style="color: #FFFFFF;">No</th>
       <th scope="col" style="color: #FFFFFF;">Nama</th>
       <th scope="col" style="color: #FFFFFF;">Email</th>

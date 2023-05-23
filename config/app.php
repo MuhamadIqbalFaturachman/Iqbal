@@ -178,6 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 // Tambah Dari web
         Barryvdh\DomPDF\ServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
     ],
 
@@ -195,6 +196,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // ...
         'PDF' => Barryvdh\DomPDF\Facade::class,
+        'Excel' => Maatwebsite\Excel\ExcelServiceProvider::class,
     ])->toArray(),
 
 ];
