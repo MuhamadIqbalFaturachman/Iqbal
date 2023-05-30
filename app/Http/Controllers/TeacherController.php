@@ -11,14 +11,14 @@ class TeacherController extends Controller
 {
     public function index()
     {
-        $title = "Data Guru";
+        $title = "Data Pengajar";
         $teacher = Teachers::orderBy('id', 'asc')->paginate(5);
         return view('teachers.index', compact(['teacher', 'title']));
     }
 
     public function create()
     {
-        $title = "Tambah Data Guru";
+        $title = "Tambah Data Pengajar";
         return view('teachers.create', compact('title'));
     }
 
@@ -44,7 +44,7 @@ class TeacherController extends Controller
 
     public function edit(Teachers $teacher)
     {
-        $title = "Edit Data Guru";
+        $title = "Edit Data Pengajar";
         return view('teachers.edit', compact(['teacher', 'title']));
     }
 

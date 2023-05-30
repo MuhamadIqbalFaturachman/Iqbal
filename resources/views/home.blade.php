@@ -29,7 +29,7 @@
             <div class="sidebar-wrapper">
                 <div class="logo">
                     <a href="{{route('home')}}" class="simple-text">
-                      HOME
+                      <img src="assets/img/logo/header.png" alt="" style="width: 100px; height: auto;">
                     </a>
                 </div>
                 <ul class="nav">
@@ -45,17 +45,11 @@
                             <p>Departements</p>
                         </a>
                     </li>
-                    <li>
-                        <a class="nav-link" href="{{route('users.index')}}">
-                            <i class="nc-icon nc-alien-33"></i>
-                            <p>Users</p>
-                        </a>
-                    </li>
 
                     <li class="nav-item active active-pro">
-                        <a class="nav-link active" href="javascript:;">
+                        <a class="nav-link active" href="{{route('users.index')}}">
                             <i class="nc-icon nc-alien-33"></i>
-                            <p>Upgrade plan</p>
+                            <p>Users</p>
                         </a>
                     </li>
                 </ul>
@@ -65,20 +59,8 @@
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo">Template</a>
-                    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-bar burger-lines"></span>
-                        <span class="navbar-toggler-bar burger-lines"></span>
-                        <span class="navbar-toggler-bar burger-lines"></span>
-                    </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         <ul class="nav navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link" data-toggle="dropdown">
-                                    <i class="nc-icon nc-palette"></i>
-                                    <span class="d-lg-none">Dashboard</span>
-                                </a>
-                            </li>
                             <li class="dropdown nav-item">
                                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                                     <i class="nc-icon nc-planet"></i>

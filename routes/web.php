@@ -29,7 +29,7 @@ Route::post('login', [UserController::class, 'login_action'])->name('login.actio
 
 Route::middleware('auth')->group(function () {
     Route::get('/', function () {
-        return view('home', ['title' => 'Beranda']);
+        return view('home', ['title' => 'Dulingo']);
     })->name('home');
 
     Route::get('password', [UserController::class, 'password'])->name('password');
