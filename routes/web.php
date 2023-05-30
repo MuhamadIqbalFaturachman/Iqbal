@@ -4,6 +4,8 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\DepartementController;
+use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\ScheduleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,5 +47,10 @@ Route::middleware('auth')->group(function () {
     Route::get('users/exportpdf', [UserController::class, 'exportPdf'])->name('users.exportpdf');
     Route::resource('users', UserController::class);
 
-    Route::get('position/exportexcel', [PositionController::class, 'exportExcel'])->name('exporExcel');
+    Route::get('position/exportexcel', [PositionController::class, 'exportExcel'])->name('exportExcel');
+
+    Route::get('teacher/exportpdf', [UserController::class, 'exportPdf'])->name('teachers.exportpdf');
+    Route::resource('teachers', TeacherController::class);
+
+    Route::resource('schedules', ScheduleController::class);
 });

@@ -1,4 +1,4 @@
-@extends('app')
+@extends('home')
 @section('content')
 @if(session('success'))
 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -11,15 +11,15 @@
 </div>
 <table class="table">
   <thead>
-    <tr style="background-color: #1D267D;">
-      <th scope="col" style="color: #FFFFFF;">No</th>
-      <th scope="col" style="color: #FFFFFF;">Nama</th>
-      <th scope="col" style="color: #FFFFFF;">Keterangan</th>
-      <th scope="col" style="color: #FFFFFF;">Singkatan</th>
-      <th scope="col" style="color: #FFFFFF;">Actions</th>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Nama</th>
+      <th scope="col">Keterangan</th>
+      <th scope="col">Singkatan</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
-  <tbody style="background-color: #D4EFDF;">
+  <tbody>
     @php $no = 1 @endphp
     @foreach ($positions as $data)
     <tr>
